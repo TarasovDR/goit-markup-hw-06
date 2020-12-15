@@ -522,7 +522,7 @@ address {
   margin-left: 30px;
 }
 
-.card a {
+.card .card-link {
   display: block;
 
   transition-property: box-shadow, transform, opacity;
@@ -541,34 +541,19 @@ address {
   overflow: hidden;
 }
 
-.card-img::before {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-
-  opacity: 0;
-  transform: translateY(100%);
-
-  transition-property: transform, opacity;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-}
-
 .card-overlay {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   padding: 63px 24px;
   font-size: 18px;
   line-height: 1.555;
   font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--primary-bg-color);
+  background-color: rgba(33, 150, 243, 0.9);
 
   opacity: 0;
   transform: translateY(100%);
@@ -578,9 +563,7 @@ address {
 }
 
 .card:hover .card-overlay,
-.card a:focus .card-overlay,
-.card:hover .card-img::before,
-.card a:focus .card-img::before {
+.card:focus .card-overlay {
   opacity: 1;
   transform: translateY(0);
 }
