@@ -510,15 +510,29 @@ address {
   display: flex;
 }
 
+.subscribe-footer-form {
+  margin-right: 12px;
+}
+
 .subscribe-footer-input {
   width: 358px;
   padding: 15px 16px;
-  margin-right: 12px;
+  margin: 0;
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
   background-color: var(--secondary-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.subscribe-footer-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-footer-input:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .footer-social-icon {
