@@ -660,49 +660,63 @@
           <svg
             width="18"
             height="18"
-            class="modal-icon"
+            class="close-icon"
             aria-label="close-icon"
           >
             <use href="./icons/sprite.svg#close"></use>
           </svg>
         </button>
 
-        <form class="form">
+        <div class="form-wrap">
           <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
 
-          <div class="form-field">
-            <label for="name">Имя</label>
-            <input type="text" id="name" name="name" />
-          </div>
+          <form class="form">
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" class="form-input" />
+            </div>
 
-          <div class="form-field">
-            <label for="telephone">Телефон</label>
-            <input type="tel" id="telephone" name="telephone" />
-          </div>
+            <div class="form-field">
+              <label for="telephone">Телефон</label>
+              <input
+                type="tel"
+                id="telephone"
+                name="telephone"
+                class="form-input"
+              />
+            </div>
 
-          <div class="form-field">
-            <label for="email">Почта</label>
-            <input type="email" id="email" name="email" />
-          </div>
+            <div class="form-field">
+              <label for="email">Почта</label>
+              <input type="email" id="email" name="email" class="form-input" />
+            </div>
 
-          <div class="form-field">
-            <label for="comment">Комментарий</label>
-            <textarea
-              name="comment"
-              id="comment"
-              rows="10"
-              placeholder="Введите текст"
-            ></textarea>
-          </div>
+            <div class="form-field">
+              <label for="comment">Комментарий</label>
+              <textarea
+                name="comment"
+                id="comment"
+                rows="10"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
 
-          <div class="form-field">
-            <input type="checkbox" name="contract" id="contract" />
-            <label for="contract">Соглашаюсь с рассылкой и принимаю </label
-            ><a href="" class="contract-link">Условия договора</a>
-          </div>
+            <div class="form-checkbox">
+              <input
+                type="checkbox"
+                id="contract"
+                name="contract"
+                class="checkbox-input"
+              />
+              <label for="contract">Соглашаюсь с рассылкой и принимаю </label
+              ><a href="" class="contract-link">Условия договора</a>
+            </div>
 
-          <button type="submit" class="btn current">Отправить</button>
-        </form>
+            <button type="submit" class="btn current btn-form">
+              Отправить
+            </button>
+          </form>
+        </div>
       </div>
     </div>
 
