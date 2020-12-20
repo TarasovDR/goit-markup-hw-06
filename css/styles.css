@@ -28,7 +28,8 @@ li,
 p,
 img,
 a,
-button {
+button,
+input {
   margin: 0;
   padding: 0;
 }
@@ -683,6 +684,7 @@ address {
   transform: translate(-50%, -50%);
   width: 528px;
   min-height: 581px;
+  padding: 40px;
 
   border-radius: 4px;
   background-color: var(--primary-bg-color);
@@ -723,50 +725,6 @@ address {
   pointer-events: none;
 }
 
-.form-wrap {
-  padding: 40px;
-  margin: 0 auto;
-}
-
-.form label {
-  margin-left: 1px;
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-}
-
-/* .form-input {} */
-
-.form-field input {
-  padding: 11px 12px;
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-.form-field label {
-  color: var(--secondary-text-color);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.167;
-  letter-spacing: 0.01em;
-}
-
-.form-field label {
-  margin-bottom: 4px;
-}
-
-.form-field {
-  margin-bottom: 10px;
-}
-
-.form-field textarea {
-  margin-bottom: 20px;
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-}
-
 .modal-title {
   display: block;
   text-align: center;
@@ -774,6 +732,64 @@ address {
   font-size: 20px;
   line-height: 1.15;
 }
+
+.modal__form label {
+  margin-left: 1px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__form-field {
+  margin-bottom: 4px;
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+}
+
+.modal__form-input-wrapper {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal__form-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding-left: 42px;
+  padding-right: 12px;
+
+  transition: border-color 250ms var(--timing-function);
+}
+
+.modal__form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal__form-input:focus + .modal__form-icon {
+  fill: var(--accent-color);
+}
+
+.modal__form-icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  transition: fill 250ms var(--timing-function);
+}
+
+/* .form-field textarea {
+  margin-bottom: 20px;
+} */
 
 /* .form-field input[type="checkbox"] {
 } */
@@ -788,7 +804,7 @@ address {
   fill: var(--accent-btn-color);
 }
 
-textarea {
+.modal__form-message {
   resize: none;
   padding: 16px 12px;
   min-height: 120;
@@ -796,6 +812,11 @@ textarea {
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
+}
+
+.modal__form-message:focus {
+  outline: none;
+  border-color: var(--accent-color);
 }
 
 .form-field textarea::placeholder {
