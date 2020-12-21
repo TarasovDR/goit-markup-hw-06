@@ -755,7 +755,7 @@ address {
   letter-spacing: 0.01em;
 }
 
-.modal__form-field .modal__form-message {
+.modal__form-field:nth-child(4) {
   margin-bottom: 20px;
 }
 
