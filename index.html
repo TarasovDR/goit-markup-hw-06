@@ -637,18 +637,18 @@
                 placeholder="E-mail"
                 class="subscribe-footer-input"
               />
+              <button type="submit" class="btn current subscribe-footer-btn">
+                Подписаться
+                <svg
+                  class="send-icon"
+                  width="24"
+                  height="24"
+                  aria-label="subscribe-button"
+                >
+                  <use href="./icons/sprite.svg#send"></use>
+                </svg>
+              </button>
             </form>
-            <button type="submit" class="btn current subscribe-footer-btn">
-              Подписаться
-              <svg
-                class="send-icon"
-                width="24"
-                height="24"
-                aria-label="subscribe-button"
-              >
-                <use href="./icons/sprite.svg#send"></use>
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -716,14 +716,16 @@
               </span>
             </label>
 
-            <label class="modal__form-field"
-              >Комментарий<textarea
-                name="user_message"
-                class="modal__form-message"
-                rows="10"
-                placeholder="Введите текст"
-              ></textarea>
-            </label>
+            <label for="textarea" class="modal__form-textarea"
+              >Комментарий</label
+            >
+            <textarea
+              id="textarea"
+              name="user_message"
+              class="modal__form-message"
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
 
             <input
               type="checkbox"
