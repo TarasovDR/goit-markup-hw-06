@@ -593,7 +593,7 @@ address {
   font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--primary-bg-color);
-  background-color: var(--accent-color);
+  background-color: rgba(33, 150, 243, 0.9);
 
   opacity: 0;
   transform: translateY(100%);
